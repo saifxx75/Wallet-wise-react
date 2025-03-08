@@ -1,0 +1,48 @@
+
+#st{
+    padding: 50px;
+   }
+
+
+    .savings {
+      background: white;
+      padding: 20px;
+      max-width: 400px;
+      margin: 0;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .progress-bar {
+      width: 100%;
+      background: #ddd;
+      height: 40px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+
+    .progress {
+      height: 100%;
+      width: 0%;
+      background: #8672FF;
+      text-align: center;
+      line-height: 20px;
+      color: white;
+      border-radius: 10px;
+    }
+
+    button {
+      background: #8672FF;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 25px;
+      margin-top: 10px;
+      width:100%;
+    }
+
+    button:hover {
+      background: #5a0cb5;
+    }

@@ -1,0 +1,30 @@
+.private-layout {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .private-layout .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: calc(100% - 250px);
+  }
+   
+  .private-layout.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: calc(100% - 250px);
+  }
+  
+  
+  .private-layout .content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+   
+  }
