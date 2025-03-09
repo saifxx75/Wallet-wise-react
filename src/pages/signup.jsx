@@ -39,7 +39,7 @@ const Signup = () => {
   return (
     <>
       <div className="wrapper">
-        <h1>Sign Up</h1>
+        <h1 style={{fontSize: "50px"}}>Sign Up</h1>
         <p id="error-message" style={{ color: "red" }}>
           {error}
         </p>
@@ -81,6 +81,7 @@ const Signup = () => {
           </div>
           <div>
             <label htmlFor="password-input">
+            <span>Password</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height={24}
@@ -111,3 +112,4 @@ const Signup = () => {
 
 export default Signup;
 
+  

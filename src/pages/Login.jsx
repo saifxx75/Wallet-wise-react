@@ -66,6 +66,7 @@ const Login = () => {
         </div>
         <div>
           <label htmlFor="password-input">
+          <span>Password</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height={24}

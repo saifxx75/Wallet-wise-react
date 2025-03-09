@@ -56,15 +56,15 @@ form > div{
 form label{
   flex-shrink: 0;
   height: 50px;
-  width: 50px;
-  background-color: var(--accent-color);
+  width: 100px;
+  background-color: #6998d0;
   fill: var(--base-color);
   color: var(--base-color);
   border-radius: 10px 0 0 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 14px;
   font-weight: 500;
 }
 form input{
@@ -98,7 +98,7 @@ form button{
   border: none;
   border-radius: 1000px;
   padding: .85em 4em;
-  background-color: var(--accent-color);
+  background-color: #6998d0;
   color: var(--base-color);
   font: inherit;
   font-weight: 600;

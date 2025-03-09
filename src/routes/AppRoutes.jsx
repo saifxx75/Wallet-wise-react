@@ -7,6 +7,7 @@ import Dashboard from '../components/Dashboard';
 import Savings from '../pages/Savings';
 import Profile from '../pages/Profile';
 import PrivateLayout from '../layout/PrivateLayout';
+import Landing from '../pages/Landing';
 
 const AppRoutes = () => {
   const isLogin = localStorage.getItem('token') !== null; // Check if token exists in local storage
@@ -16,13 +17,14 @@ const AppRoutes = () => {
       {/* Public Routes */}
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
+      <Route path="/" element={<Landing />} /> {/* Default Route set to Landing */}
 
       {/* Private Routes (Require Authentication) */}
       <Route 
-        path="/" 
+        path="/app" 
         element={isLogin ? <PrivateLayout /> : <Navigate to="/login" replace />}
       >
-        <Route index element={<Home />} /> {/* Default Route */}
+        <Route index element={<Home />} /> {/* Default Route within PrivateLayout */}
         <Route path="home" element={<Home />} />
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="savings-tracker" element={<Savings />} />
@@ -30,7 +32,7 @@ const AppRoutes = () => {
       </Route>
 
       {/* Fallback Route (Redirect unknown paths) */}
-      <Route path="*" element={<Navigate to={isLogin ? "/" : "/login"} replace />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 };
