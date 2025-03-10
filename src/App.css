@@ -197,6 +197,7 @@ body {
   color: var(--text-clr);
   display: grid;
   grid-template-columns: auto 1fr;
+  overflow: scroll;
 }
 
 
