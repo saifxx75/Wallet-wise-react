@@ -77,7 +77,7 @@ const Sidebar = () => {
             </button>
           </li>
           <li>
-            <Link to="/home">
+            <Link to="/app/home">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="24px"
@@ -91,7 +91,7 @@ const Sidebar = () => {
             </Link>
           </li>
           <li class="active">
-            <Link to="/dashboard">
+            <Link to="/app/dashboard">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="24px"
@@ -105,7 +105,7 @@ const Sidebar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/savings-tracker">
+            <Link to="/app/savings-tracker">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="24px"
@@ -119,7 +119,7 @@ const Sidebar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/profile">
+            <Link to="/app/profile">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="24px"

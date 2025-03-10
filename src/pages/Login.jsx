@@ -9,40 +9,32 @@ const Login = () => {
   const [password, setPassword] = React.useState("");
   const [error, setError] = React.useState("");
   const navigate = useNavigate();
-
   const handleLogin = async (event) => {
     event.preventDefault();
-
+  
     try {
       const res = await axios.post(`${baseUrl}/auth/login`, {
         email,
         password,
       });
-
+  
+      console.log("Full API Response:", res); // Log full response
       const data = res.data;
-
-      // Debugging: Check the response
-      console.log("Response data:", data);
-
-      if (data.error) {
-        setError(data.error);
+      console.log("Response Data:", data); // Log data only
+      console.log("Bearer Token:", data.bearerToken);
+  
+      if (data.status === 200 && data.bearerToken) {
+        localStorage.setItem("bearerToken", data.bearerToken);
+        navigate("/app/home");
       } else {
-        // Store token in localStorage and navigate to home
-        localStorage.setItem("token", data.token);
-
-        // Debugging: Check if token is stored correctly
-        console.log("Token stored:", localStorage.getItem("token"));
-
-        // Navigate to home page
-        console.log("Navigating to home...");
-        navigate("/home");
+        setError(data.message || "Login failed.");
       }
     } catch (error) {
-      // Catch any unexpected errors
       console.error("Login failed:", error);
       setError("An unexpected error occurred.");
     }
   };
+  
 
   return (
     <div className="wrapper">

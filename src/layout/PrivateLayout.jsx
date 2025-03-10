@@ -4,7 +4,7 @@ import Sidebar from '../components/Sidebar';
 import '../css/privatelayout.css'
 
 const PrivateLayout = () => {
-  const isAuthenticated = false; // Replace this with actual auth logic
+  const isAuthenticated = localStorage.getItem('bearerToken') !== null;
 
   if (!isAuthenticated) {
     return <Navigate to="/login" replace />;
@@ -21,3 +21,4 @@ const PrivateLayout = () => {
 };
 
 export default PrivateLayout;
+
