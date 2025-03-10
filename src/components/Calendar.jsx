@@ -1,36 +1,36 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Calendar from "react-calendar";
-import 'react-calendar/dist/Calendar.css';
-
-const CalendarComponent = () => {
+import "react-calendar/dist/Calendar.css";
+import "../css/calendar.css";
+const CustomCalendar = () => {
   const [date, setDate] = useState(new Date());
 
-  const isToday = (calendarDate) => {
+  const isToday = (dateToCheck) => {
     const today = new Date();
     return (
-      calendarDate.getDate() === today.getDate() &&
-      calendarDate.getMonth() === today.getMonth() &&
-      calendarDate.getFullYear() === today.getFullYear()
+      dateToCheck.getDate() === today.getDate() &&
+      dateToCheck.getMonth() === today.getMonth() &&
+      dateToCheck.getFullYear() === today.getFullYear()
     );
   };
 
   return (
-    <div className="p-4 border rounded-lg shadow-md">
-      <h3 className="text-lg font-semibold mb-3">📅 Select a Date</h3>
-      <Calendar 
-        onChange={setDate} 
+    <div className="calendar-container">
+      <h3 className="calendar-title">📅 Select a Date</h3>
+      <Calendar
+        onChange={setDate}
         value={date}
-        className="w-full"
-        tileClassName={({ date, view }) => 
+        className="calendar-wrapper"
+        tileClassName={({ date, view }) =>
           view === "month" && isToday(date) ? "today" : ""
         }
-        tileContent={({ date, view }) => 
-          view === "month" && isToday(date) ? <span className="text-blue-500">🌟</span> : null
+        tileContent={({ date, view }) =>
+          view === "month" && isToday(date) ? <span>🌟</span> : null
         }
       />
-      <p className="mt-2 text-gray-700">Selected Date: {date.toDateString()}</p>
+      <p className="selected-date">Selected Date: {date.toDateString()}</p>
     </div>
   );
 };
 
-export default CalendarComponent;
+export default CustomCalendar;

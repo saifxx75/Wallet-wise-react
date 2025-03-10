@@ -75,7 +75,7 @@ const Home = () => {
         <button id="new-tip" onClick={showRandomTip}>New Tip</button>
       </div>
     </div>
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+    <div className="calendar flex justify-center items-center min-h-screen bg-gray-100">
       <CalendarComponent />
     </div>
   </main>

@@ -37,12 +37,12 @@ h1{
 }
 
 body {
-    /* min-height: 100vh; */
+    min-height: 100vh;
     background-image: url('https://static.vecteezy.com/system/resources/previews/011/432/528/non_2x/enter-login-and-password-registration-page-on-screen-sign-in-to-your-account-creative-metaphor-login-page-mobile-app-with-user-page-flat-illustration-vector.jpg');
     background-size: 50%;
     background-repeat: no-repeat;
     overflow: scroll;
-    /* width: 50%; */
+    width: 50%;
 }
 
 .text {
@@ -73,11 +73,12 @@ button:focus {
     outline: none;
     background-color: var(--text-color);
 }
-/* .main-dev{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
+.main-dev{
+    background-image: url('https://static.vecteezy.com/system/resources/previews/011/432/528/non_2x/enter-login-and-password-registration-page-on-screen-sign-in-to-your-account-creative-metaphor-login-page-mobile-app-with-user-page-flat-illustration-vector.jpg');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    overflow: scroll;
+}
 
 .wrapper {
     box-sizing: border-box;
