@@ -10,7 +10,7 @@ import Landing from '../pages/Landing';
 import Signup from '../pages/Signup';
 
 const AppRoutes = () => {
-  const isLogin = localStorage.getItem('token') !== null; // Check if token exists in local storage
+  const isLogin = localStorage.getItem('bearerToken') !== null; // Check if token exists in local storage
 
   return (
     <Routes>
