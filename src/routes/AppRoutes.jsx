@@ -1,13 +1,13 @@
 import React from 'react';
 import { Route, Routes, Navigate, Outlet } from 'react-router-dom';
 import Login from '../pages/Login';
-import Signup from '../pages/signup';
 import Home from '../pages/Home';
 import Dashboard from '../components/Dashboard';
 import Savings from '../pages/Savings';
 import Profile from '../pages/Profile';
 import PrivateLayout from '../layout/PrivateLayout';
 import Landing from '../pages/Landing';
+import Signup from '../pages/Signup';
 
 const AppRoutes = () => {
   const isLogin = localStorage.getItem('token') !== null; // Check if token exists in local storage
